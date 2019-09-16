@@ -46,6 +46,9 @@ var x = {
     ]}},
   ]
 };
+  
+
+  
 var map = L.map('mapid').setView([0, 0], 2);
 L.tileLayer(
 'https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png',
@@ -60,6 +63,17 @@ var layer = L.geoJSON(x, {
     }
 }).addTo(l);
 l.addTo(map)
+  
+setInterval(
+  function(){
+    $.ajax({url:'akemihomura.localtunnel.me', type:'GET', data:args}).done( (data) => {
+      console.log(data);
+      L.geoJSON(data).addTo(l);
+    });
+  }, 10000)}
+)();  
+
+
 </script>
 </body>
 </html>
