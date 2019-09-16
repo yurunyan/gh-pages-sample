@@ -67,12 +67,12 @@ l.addTo(map)
 jQuery(function($){
   setInterval(
     function(){
-      $.ajax({url:'akemihomura.localtunnel.me', type:'GET'}).done( (data) => {
+      $.ajax({url:'https://akemihomura.localtunnel.me', type:'GET'}).done( (data) => {
         console.log(data);
         L.geoJSON(data).addTo(l);
       });
     }, 10000
-  )();  
+  );  
 });
 
 </script>
