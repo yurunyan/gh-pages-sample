@@ -32,7 +32,7 @@ L.tileLayer(
 var l = new L.LayerGroup();
 var layer = L.geoJSON(x, {
     onEachFeature: function (f, l) {
-      l.bindPopup('<pre>'+JSON.stringify(f.properties,null,' ').replace(/[\{\}"]/g,'')+'</pre>');
+      l.bindPopup('<pre></pre>');
     }
 }).addTo(l);
 l.addTo(map)
