@@ -67,7 +67,7 @@ l.addTo(map)
 jQuery(function($){
   setInterval(
     function(){
-      $.ajax({url:'https://kirimasyaro.com:5000', type:'GET'}).done( (data) => {
+      $.ajax({url:'https://', type:'GET'}).done( (data) => {
         console.log(data);
         L.geoJSON(data).addTo(l);
       });
